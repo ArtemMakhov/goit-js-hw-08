@@ -48,3 +48,4 @@ function displayTextInForm() {
         refs.input.value = parsedMessage.email;
 }
 };
+
