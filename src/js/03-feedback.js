@@ -26,10 +26,14 @@ function populateTextMessage() {
     const getLocalMessage = localStorage.getItem(STORAGE_KEY);
     const parsedMessage = JSON.parse(getLocalMessage);
     
+    if (getLocalMessage) {
+    savedMessage.email = parsedMessage.email;
+    savedMessage.message = parsedMessage.message;
+   }
     if (parsedMessage !== null) {
         refs.email.value = parsedMessage.email;
        refs.message.value = parsedMessage.message;
-    }
+   }
 
 }
 
