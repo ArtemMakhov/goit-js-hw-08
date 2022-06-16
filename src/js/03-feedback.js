@@ -49,6 +49,8 @@ function onFormSubmit(evt) {
         savedMessage.message = message.value;
         console.log(savedMessage);
         
+        savedMessage.email = '';
+        savedMessage.message = '';
         evt.currentTarget.reset();
         localStorage.removeItem(STORAGE_KEY);
     }
